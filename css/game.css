@@ -1,0 +1,138 @@
+/* Add this at the very top of game.css */
+body {
+    background-image: url('../assets/img/tigerfistpump.jpg');
+    background-size: cover;       /* Ensures it covers the whole screen */
+    background-position: center;  /* Centers Tiger in the middle */
+    background-attachment: fixed; /* The image stays still while you scroll */
+    margin: 0;                    /* Removes default white borders */
+    color: white;                 /* Changes text color to white so it pops */
+}
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); 
+}
+
+/* 2. The Grid (The Boxes) */
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns for 5 letters */
+    grid-gap: 5px;
+    padding: 10px;
+}
+
+.tile {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #d3d6da; /* Light grey border */
+    display: flex;
+    justify-content: center; /* Center letter horizontally */
+    align-items: center;     /* Center letter vertically */
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* 3. The Colors (Green, Yellow, Grey) */
+.correct {
+    background-color: #6aaa64; /* Green */
+    color: white;
+    border-color: #6aaa64;
+}
+
+.present {
+    background-color: #c9b458; /* Yellow */
+    color: white;
+    border-color: #c9b458;
+}
+
+.absent {
+    background-color: #787c7e; /* Grey */
+    color: white;
+    border-color: #787c7e;
+}
+
+/* 4. Keyboard Styling */
+#keyboard-container {
+    margin-top: 30px;
+}
+
+.key-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+button {
+    font-family: inherit;
+    font-weight: bold;
+    border: 0;
+    padding: 0;
+    margin: 0 6px 0 0;
+    height: 58px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #d3d6da; /* Grey keys */
+    color: black;
+    width: 40px;
+    text-transform: uppercase;
+}
+
+.wide-button {
+    width: 65px; /* Make Enter and Delete bigger */
+}
+
+/* Game Over Modal */
+.modal {
+    position: fixed;
+    top: 0; left: 0; 
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.7); /* Dim background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.hidden {
+    display: none; /* Hides it while playing */
+}
+
+.modal-content {
+    background-color: white;
+    color: black;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    border: 4px solid #6aaa64; /* Green border */
+    width: 300px;
+}
+
+.modal-content h2 {
+    font-size: 30px;
+    margin: 0 0 10px 0;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.modal-content button {
+    background-color: #6aaa64;
+    color: white;
+    width: 100%;
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.modal-content button:hover {
+    background-color: #538d4e;
+}

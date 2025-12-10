@@ -1,0 +1,99 @@
+/* 1. GLOBAL SETTINGS */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Clean, modern font */
+    line-height: 1.6; /* Adds space between lines of text */
+    color: #333; /* Dark grey text is easier to read than black */
+    background-color: #f4f4f4; /* Light grey background */
+}
+
+/* 2. NAVIGATION BAR (Simple Top Bar) */
+.my-nav {
+    background-color: #fef5dd;
+    padding: 20px;
+    text-align: center; /* Centers the links */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Adds a subtle shadow */
+}
+
+.my-nav a {
+    text-decoration: none; /* Removes the underline */
+    color: #333;
+    font-weight: bold;
+    margin: 0 15px; /* Adds space between the links */
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.my-nav a:hover {
+    color: #0085a1; /* Changes color when you hover mouse over it */
+}
+
+/* 3. THE HERO HEADER (Your Picture) */
+.mission-header {
+    background-image: url('../assets/img/santiagoatnight.jpg'); /* Make sure this path is correct! */
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.mission-header h1 {
+    font-size: 60px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Black shadow to make text pop */
+    margin: 0;
+}
+
+
+.content-wrapper {
+    max-width: 800px; /* Keeps text from stretching too wide */
+    margin: -50px auto 50px; /* Negative top margin pulls it up over the image! */
+    background: #d8faff;
+    padding: 40px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: relative; /* Needed for the overlapping effect */
+}
+
+/* 5. STYLING THE LIST */
+ol {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 50px; /* Space between your locations */
+    font-size: 18px;
+}
+
+h5 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+/* 6. MEDIA (Fixing Images and Video) */
+img {
+    width: 100%;       
+    height: auto;      
+    border-radius: 5px;
+    display: block;
+    margin: 20px 0;
+}
+
+iframe {
+    width: 100%; /* Forces video to fit */
+    aspect-ratio: 16 / 9; /* Keeps the rectangle shape perfect */
+    border: none;
+    border-radius: 5px;
+}
+
+/* Special rule for vertical (tall) pictures */
+.vertical-img {
+    width: 50% !important; /* Overrides the global 100% rule */
+    margin-left: auto;     /* These two lines center the smaller image */
+    margin-right: auto;
+}

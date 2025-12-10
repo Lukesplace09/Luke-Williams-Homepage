@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Golfle - Golf Word Game</title>
+    <link href="css/mission.css" rel="stylesheet"> 
+    <link href="css/game.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="my-nav">
+        <a href="index.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="mymission.html">My Mission</a>
+        <a href="game.html">Game</a>
+    </nav>
+
+    <div class="game-container">
+        <h1>GOLFLE</h1>
+        <p>Guess the GOLF term in 6 tries!</p>
+        
+        <div id="game-board"></div>
+        <div id="game-over-modal" class="modal hidden">
+    <div class="modal-content">
+        <h2 id="game-result"></h2>
+        <p id="correct-word"></p>
+        <button onclick="resetGame()">Tee Off Again ⛳</button>
+    </div>
+</div>
+        
+        <div id="keyboard-container">
+            <div class="key-row">
+                <button data-key="q">q</button><button data-key="w">w</button><button data-key="e">e</button><button data-key="r">r</button><button data-key="t">t</button><button data-key="y">y</button><button data-key="u">u</button><button data-key="i">i</button><button data-key="o">o</button><button data-key="p">p</button>
+            </div>
+            <div class="key-row">
+                <button data-key="a">a</button><button data-key="s">s</button><button data-key="d">d</button><button data-key="f">f</button><button data-key="g">g</button><button data-key="h">h</button><button data-key="j">j</button><button data-key="k">k</button><button data-key="l">l</button>
+            </div>
+            <div class="key-row">
+                <button data-key="Enter" class="wide-button">ENTER</button>
+                <button data-key="z">z</button><button data-key="x">x</button><button data-key="c">c</button><button data-key="v">v</button><button data-key="b">b</button><button data-key="n">n</button><button data-key="m">m</button>
+                <button data-key="Backspace" class="wide-button">⌫</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/game.js"></script>
+</body>
+</html>
